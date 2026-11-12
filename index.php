@@ -23,7 +23,9 @@ $ressources = lire () ;
 foreach ($ressources as $res) {
     echo "<h1>".$res['titre']."</h1>";
     echo "<p>".$res['description']."</p>";
-    echo "<a href='".$res['url']."'>".$res['url']."</a>";
+    $chemin=$res['type']=="document" ? "uploads/".$res['fichier'] : $res['url'];
+    echo "<a href='".$chemin."' target='_blank'>Voir</a>";
+
 }
 
 ?>
