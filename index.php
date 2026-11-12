@@ -1,4 +1,5 @@
 <!-- C:\xampp\htdocs\MediaBox\FICHIERS\MediaBox -->
+<!-- http://localhost/mediabox/FICHIERS/MediaBox/ -->
 
 <?php
 
