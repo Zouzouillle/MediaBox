@@ -18,4 +18,4 @@ numériques qui pèsent sur vos usages personnels ou professionnels."
 url:"https://cyber.gouv.fr/10-regles-dor-en-matiere-de-securite-numerique"
 date:"2025-08-07"
 
-//C:\xampp\htdocs\MediaBox\FICHIERS
+//C:\xampp\htdocs\MediaBox\FICHIERS\MediaBox
