@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+article {
+    border : solid 2px #ccc;
+    border-radius : 10px;
+    width : 300px;
+    text-align : center;
+    background-color : #eee;
+}
