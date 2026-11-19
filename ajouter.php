@@ -56,6 +56,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          - un seul formulaire pour les deux types
          - valeurs saisies réaffichées
          - attention à l'attribut enctype pour l'envoi de fichier -->
+<form action="ajouter.php" method="post">
+
+    <label>Type</label>
+
+    <select name="type">
+        <option value="document">document</option>
+        <option value="favori">favori</option>
+    </select>
+
+    <label>Titre</label>
+        <input type="text" name="titre">
+    <label>Mots-clés</label>
+        <textarea name="mots-cles"></textarea>
+        <label>Description</label>
+        <textarea name="description"></textarea>
+        <label>Fichier</label>
+        <input type="file" name="fichier">
+
+
+</form>
 
 
     <!-- Script de bascule : afficher le champ fichier ou le champ URL selon le type

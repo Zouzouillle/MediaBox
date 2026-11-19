@@ -53,3 +53,63 @@ footer a, header a {
     transition: background-color 0.3s ease;
 }
 
+body > form {
+    box-sizing: border-box;
+    width: 350px;
+    max-width: calc(100% - 40px);
+    margin: 40px auto;
+    padding: 40px 16px 48px;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body > form label {
+    font-weight: bold;
+}
+
+body > form input,
+body > form textarea,
+body > form select {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    font: inherit;
+}
+
+body > form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+body > form button,
+body > form input[type="submit"] {
+    border: none;
+    color: #fff;
+    background-color: #87b3e1;
+    font: inherit;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+body > form input[type="file"]::file-selector-button {
+    border: none;
+    color: #fff;
+    background-color: #87b3e1;
+    font: inherit;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
