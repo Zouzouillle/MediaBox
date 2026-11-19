@@ -56,29 +56,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          - un seul formulaire pour les deux types
          - valeurs saisies réaffichées
          - attention à l'attribut enctype pour l'envoi de fichier -->
+
 <form action="ajouter.php" method="post">
 
     <label>Type</label>
-
-    <select name="type">
+    <select id="type" name="type">
         <option value="document">document</option>
         <option value="favori">favori</option>
     </select>
 
     <label>Titre</label>
-        <input type="text" name="titre">
+    <input type="text" name="titre">
+
     <label>Mots-clés</label>
-        <textarea name="mots-cles"></textarea>
-        <label>Description</label>
-        <textarea name="description"></textarea>
-        <label>Fichier</label>
-        <input type="file" name="fichier">
+    <textarea name="mots-cles"></textarea>
+
+    <label>Description</label>
+    <textarea name="description"></textarea>
+
+    <label class="fichier">Fichier</label>
+    <input class="fichier" type="file" name="fichier">
+
+    <label class="url">Url</label>
+    <input class="url" type="text" name="url">
 
 
 </form>
 
-
     <!-- Script de bascule : afficher le champ fichier ou le champ URL selon le type
          (penser à l'état du formulaire au chargement de la page) -->
+<script>
+
+    const selectType = document.getElementById('type');
+    selectType.addEventListener('change', () => {
+        const doc = document.querySelectorAll('.fichier');
+        const favori = document.querySelectorAll('.url');
+        if (selectType.value == "document") {
+            
+            doc.forEach((element) => {
+                element.style.display="block";
+            });
+            
+            favori.forEach((element) => {
+                element.style.display="none";
+            });
+        }
+        else {
+            
+            doc.forEach((element) => {
+                element.style.display="none";
+            });
+            
+            favori.forEach((element) => {
+                element.style.display="block";
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
